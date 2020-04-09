@@ -1,0 +1,14 @@
+	LXI H,2
+	MOV A,M
+	INX H
+	MOV B,M
+	MVI C,00H
+    L1: CMP B
+	JC L2
+	SUB B
+	INR C
+	JMP L1
+    L2: STA 5
+	MOV A,C
+	STA 6
+	HLT

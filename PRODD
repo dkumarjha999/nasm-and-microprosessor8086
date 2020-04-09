@@ -1,0 +1,13 @@
+	; print odd number
+	LXI H,2
+	MOV B,M
+	INX H
+        MVI A,01H
+    L1: MOV D,A
+	ADD M
+	STA 3
+	MOV A,D
+	ADI 02H
+	DCR B
+	JNZ L1
+	HLT

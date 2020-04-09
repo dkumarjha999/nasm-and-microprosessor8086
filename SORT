@@ -1,0 +1,22 @@
+;SORTIING
+
+    L0: LXI H,0
+	MVI D,0
+	MOV C,M
+	DCR C
+	INX H
+    L1:	MOV A,M
+	INX H
+	CMP M
+	JC L2
+	MOV B,M
+	MOV M,A
+	DCX H
+	MOV M,B
+	INX H
+	MVI D,1
+    L2:	DCR C
+	JNZ L1
+	MOV A,D
+	JNC L0
+	HLT                        

@@ -1,0 +1,8 @@
+;  ASCII TO HEX 
+	LDA 5
+	SBI 30
+	CPI 0AH
+	JC L1
+	SBI 07
+    L1: STA 7
+	HLT	

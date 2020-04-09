@@ -1,0 +1,16 @@
+; HEX TO BCD
+
+	LDA 2
+	MVI D,00H
+	MOV C,A
+	MVI A,00H
+    L1: ADI 01H
+	DAA
+	JNC L2
+        INR D
+    L2: DCR C
+	JNZ L1
+	STA 5
+	MOV A,D
+	STA 6
+	HLT

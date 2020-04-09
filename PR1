@@ -1,0 +1,19 @@
+    L0:	MVI A,00H
+	MOV H,A
+	CALL O1
+	CALL L1
+	MOV A,H
+	ADI 01H
+	DAA
+	JMP L0
+	HLT
+   
+    O1: MOV A,H
+	RET
+	
+    L1: MVI B,02H
+	MOV A,B
+	ORA B
+	DCR B
+	JNZ L1
+	RET 	

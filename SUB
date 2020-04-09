@@ -1,0 +1,11 @@
+
+;SUB
+	LXI H,7
+	MOV B,M
+	DCX H
+	MOV A,B
+	MOV B,M
+	SUB B
+	STA 0	
+	
+HLT

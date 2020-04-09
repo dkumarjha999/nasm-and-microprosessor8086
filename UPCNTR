@@ -1,0 +1,23 @@
+;decimal up COUNTER/DNCTR
+
+	MVI A,5H
+    IC: MOV H,A
+	CALL OU
+	CALL LA
+	MOV A,H
+	SBI 01H
+	JNZ IC
+        HLT
+    OU: MOV D,H
+	RET
+    LA: MVI C,2H 
+        MOV A,C
+    L1:	MOV B,A
+	ORA B
+	DCR A
+	JNZ L1	
+	RET
+
+	
+	
+	
